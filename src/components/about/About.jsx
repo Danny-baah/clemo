@@ -65,13 +65,6 @@ export default function About() {
 
   return (
     <section id="ueber-uns" className="about-section" aria-label="Über Clemmo HP">
-      {/* Subtle organic curved transition edge overlapping the hero */}
-      <div className="about-curved-boundary" aria-hidden="true">
-        <svg viewBox="0 0 1440 60" fill="none" preserveAspectRatio="none" className="about-curve-svg">
-          <path d="M0,45 C380,12 860,6 1440,32 L1440,60 L0,60 Z" fill="#F0F5F7" />
-        </svg>
-      </div>
-
       <div className="about-container">
         {/* Main Editorial Two-Column Hero */}
         <div className="about-editorial-grid">
@@ -79,7 +72,7 @@ export default function About() {
           <div className="about-content-col">
             <div className="about-eyebrow">
               <span className="about-eyebrow-rule" aria-hidden="true" />
-              <span className="about-eyebrow-text">Über Clemmo HP</span>
+              <span className="about-eyebrow-text">Über Clemmo</span>
             </div>
 
             <h2 className="about-headline">

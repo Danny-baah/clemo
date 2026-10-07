@@ -3,44 +3,43 @@ import Hero from './components/hero/Hero.jsx';
 import About from './components/about/About.jsx';
 import Products from './components/products/Products.jsx';
 import Process from './components/process/Process.jsx';
-
 import Quality from './components/quality/Quality.jsx';
 import Contact from './components/contact/Contact.jsx';
 import Footer from './components/footer/Footer.jsx';
 
 /**
- * App - Root application component.
- * Houses:
- * 1. Cinematic Hero (Layered scrub)
+ * App - Root application component for the Clemmo HP Standard / Simple Version.
+ * Conventional modern document flow:
+ * 1. Static Hero ("Individuelle Baustein-Sets")
  * 2. About section ("Über uns")
- * 3. Products section ("Unsere Produkte" - normal document flow)
- * 4. Process section ("Unser Prozess" - pinned storytelling experience)
- * 5. Quality section ("Qualität" - normal document flow)
- * 6. Contact section ("Kontakt" - final conversion section)
- * 7. Footer (CTA banner + comprehensive 5-col navigation & brand footer)
+ * 3. Products section ("Unsere Produkte")
+ * 4. Process section ("Unser Prozess" 4-step layout + "Bereit für Ihr Projekt" CTA)
+ * 5. Quality section ("Qualität")
+ * 6. Contact section ("Kontakt")
+ * 7. Footer (Upper CTA banner + 5-column navigation & brand footer)
  */
 export default function App() {
   return (
     <div className="clemmo-app">
-      {/* 1. Cinematic Scroll Hero (Fixed stage during scrubbing) */}
+      {/* 1. Static Hero */}
       <Hero />
 
-      {/* 2. About Section ("Über uns") - Physical sheet sliding over hero */}
+      {/* 2. About Section */}
       <About />
 
-      {/* 3. Products Section ("Unsere Produkte") - Normal document scroll */}
+      {/* 3. Products Section */}
       <Products />
 
-      {/* 4. Process Section ("Unser Prozess") - Pinned storytelling experience */}
+      {/* 4. Process Section (4 Steps + Process CTA) */}
       <Process />
 
-      {/* 5. Quality Section ("Qualität") - Normal document scroll */}
+      {/* 5. Quality Section */}
       <Quality />
 
-      {/* 6. Contact Section ("Kontakt") - Final conversion section */}
+      {/* 6. Contact Section */}
       <Contact />
 
-      {/* 7. Footer - Final brand footer & project CTA */}
+      {/* 7. Footer */}
       <Footer />
     </div>
   );

@@ -1,34 +1,37 @@
 import React, { useState, useEffect } from 'react';
 
 /**
- * HeroNavbar - Premium European B2B navigation bar.
- * Transparent over pinned hero; smoothly transitions to dark surface when hero releases.
+ * HeroNavbar - Premium B2B navigation bar for Clemmo HP.
+ * Operates in standard document flow as a clean fixed header with backdrop blur on scroll.
  */
-export default function HeroNavbar({ isPastHero = false }) {
+export default function HeroNavbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeItem, setActiveItem] = useState('Produkte');
+  const [scrolled, setScrolled] = useState(false);
+  const [activeItem, setActiveItem] = useState('Startseite');
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
+      setScrolled(scrollY > 40);
+
       const kontaktEl = document.getElementById('kontakt');
       const qualitaetEl = document.getElementById('qualitaet');
       const prozessEl = document.getElementById('prozess');
       const productsEl = document.getElementById('produkte');
       const aboutEl = document.getElementById('ueber-uns');
 
-      if (kontaktEl && scrollY >= kontaktEl.offsetTop - 250) {
+      if (kontaktEl && scrollY >= kontaktEl.offsetTop - 260) {
         setActiveItem('Kontakt');
-      } else if (qualitaetEl && scrollY >= qualitaetEl.offsetTop - 250) {
+      } else if (qualitaetEl && scrollY >= qualitaetEl.offsetTop - 260) {
         setActiveItem('Qualität');
-      } else if (prozessEl && scrollY >= prozessEl.offsetTop - 250) {
-        setActiveItem('Prozess');
-      } else if (productsEl && scrollY >= productsEl.offsetTop - 250) {
+      } else if (prozessEl && scrollY >= prozessEl.offsetTop - 260) {
+        setActiveItem('Unser Prozess');
+      } else if (productsEl && scrollY >= productsEl.offsetTop - 260) {
         setActiveItem('Produkte');
-      } else if (aboutEl && scrollY >= aboutEl.offsetTop - 250) {
+      } else if (aboutEl && scrollY >= aboutEl.offsetTop - 260) {
         setActiveItem('Über uns');
       } else {
-        setActiveItem(scrollY < 150 ? 'Startseite' : 'Über uns');
+        setActiveItem('Startseite');
       }
     };
 
@@ -41,18 +44,32 @@ export default function HeroNavbar({ isPastHero = false }) {
     { label: 'Startseite', href: '#' },
     { label: 'Über uns', href: '#ueber-uns' },
     { label: 'Produkte', href: '#produkte' },
-    { label: 'Prozess', href: '#prozess' },
+    { label: 'Unser Prozess', href: '#prozess' },
     { label: 'Qualität', href: '#qualitaet' },
     { label: 'Kontakt', href: '#kontakt' },
   ];
 
+  const handleLinkClick = (e, href) => {
+    setMobileMenuOpen(false);
+    if (href === '#') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   return (
-    <header className={`hero-header ${isPastHero ? 'hero-header--scrolled' : ''}`}>
+    <header className={`hero-header ${scrolled ? 'hero-header--scrolled' : ''}`}>
       <nav className="hero-nav" aria-label="Hauptnavigation">
         {/* Brand Wordmark */}
         <div className="hero-brand">
-          <a href="#" className="hero-brand-link" aria-label="Clemmo Startseite">
+          <a
+            href="#"
+            onClick={(e) => handleLinkClick(e, '#')}
+            className="hero-brand-link"
+            aria-label="Clemmo Startseite"
+          >
             <span className="brand-wordmark">Clemmo</span>
+            <sup className="brand-registered">®</sup>
           </a>
         </div>
 
@@ -64,6 +81,7 @@ export default function HeroNavbar({ isPastHero = false }) {
               <li key={link.label} className="hero-nav-item">
                 <a
                   href={link.href}
+                  onClick={(e) => handleLinkClick(e, link.href)}
                   className={`hero-nav-link ${isActive ? 'hero-nav-link--active' : ''}`}
                 >
                   {link.label}
@@ -75,7 +93,11 @@ export default function HeroNavbar({ isPastHero = false }) {
 
         {/* Right CTA */}
         <div className="hero-nav-actions">
-          <a href="#kontakt" className="nav-cta-button" aria-label="Projekt anfragen">
+          <a
+            href="#kontakt"
+            className="nav-cta-button"
+            aria-label="Projekt anfragen"
+          >
             <span>Projekt anfragen</span>
             <span className="nav-cta-arrow" aria-hidden="true">→</span>
           </a>
@@ -104,8 +126,8 @@ export default function HeroNavbar({ isPastHero = false }) {
             <li key={link.label}>
               <a
                 href={link.href}
-                className={`mobile-drawer-link ${link.active ? 'active' : ''}`}
-                onClick={() => setMobileMenuOpen(false)}
+                className="mobile-drawer-link"
+                onClick={(e) => handleLinkClick(e, link.href)}
               >
                 {link.label}
               </a>

@@ -31,7 +31,7 @@ export default function ContactInfo() {
           <div className="info-content">
             <span className="info-label">Adresse</span>
             <div className="info-value address-lines">
-              <strong>Clemmo HP</strong>
+              <strong>Clemmo</strong>
               <span>[Adresse]</span>
               <span>[PLZ Ort]</span>
               <span>Deutschland</span>
