@@ -123,12 +123,16 @@ export default function Quality() {
               <div className="feature-panel-visual">
                 <img
                   src="/quality/quality_macro_bricks.jpg"
-                  alt="Detailaufnahme präzise gefertigter Clemmo HP Bausteine"
+                  alt="Detailaufnahme präzise gefertigter Clemmo Bausteine"
                   className="feature-panel-img"
                   loading="lazy"
                   decoding="async"
                 />
                 <div className="feature-panel-overlay" aria-hidden="true" />
+                <div className="image-ai-badge image-ai-badge--sm" aria-hidden="true">
+                  <span className="badge-dot" />
+                  <span>KI-GENERIERTES BILD</span>
+                </div>
               </div>
             </div>
           </div>
@@ -142,9 +146,9 @@ export default function Quality() {
               loading="lazy"
               decoding="async"
             />
-            <div className="quality-visual-badge">
-              <span className="badge-dot-green" aria-hidden="true" />
-              <span>QUALITÄTSSTANDARDS & PRÜFUNG</span>
+            <div className="image-ai-badge" aria-hidden="true">
+              <span className="badge-dot" />
+              <span>KI-GENERIERTES BILD</span>
             </div>
           </div>
         </div>

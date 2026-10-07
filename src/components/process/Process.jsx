@@ -102,6 +102,10 @@ export default function Process() {
                   className="process-step-img"
                   loading="lazy"
                 />
+                <div className="image-ai-badge image-ai-badge--sm" aria-hidden="true">
+                  <span className="badge-dot" />
+                  <span>KI-GENERIERTES BILD</span>
+                </div>
               </div>
             </article>
           ))}
@@ -148,6 +152,10 @@ export default function Process() {
                   className="process-cta-img"
                   loading="lazy"
                 />
+                <div className="image-ai-badge" aria-hidden="true">
+                  <span className="badge-dot" />
+                  <span>KI-GENERIERTES BILD</span>
+                </div>
               </div>
             </div>
           </div>

@@ -138,9 +138,9 @@ export default function About() {
                 className="about-model-image"
                 loading="lazy"
               />
-              <div className="about-image-badge" aria-hidden="true">
+              <div className="image-ai-badge" aria-hidden="true">
                 <span className="badge-dot" />
-                <span>ENTWICKELT IN DEUTSCHLAND</span>
+                <span>KI-GENERIERTES BILD</span>
               </div>
             </div>
           </div>
@@ -165,6 +165,10 @@ export default function About() {
                     className="capability-thumbnail"
                     loading="lazy"
                   />
+                  <div className="image-ai-badge image-ai-badge--sm" aria-hidden="true">
+                    <span className="badge-dot" />
+                    <span>KI-GENERIERTES BILD</span>
+                  </div>
                 </div>
               </div>
             ))}

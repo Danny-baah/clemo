@@ -271,6 +271,7 @@
 }
 
 .capability-thumbnail-wrapper {
+  position: relative;
   margin-top: 0.4rem;
   width: 100%;
   border-radius: 12px;

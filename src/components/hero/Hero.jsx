@@ -116,6 +116,10 @@ export default function Hero() {
             />
             {/* Subtle atmospheric vignette and highlight overlays */}
             <div className="hero-visual-vignette" aria-hidden="true" />
+            <div className="image-ai-badge" aria-hidden="true">
+              <span className="badge-dot" />
+              <span>KI-GENERIERTES BILD</span>
+            </div>
           </div>
         </div>
       </div>
