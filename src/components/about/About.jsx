@@ -140,7 +140,7 @@ export default function About() {
               />
               <div className="about-image-badge" aria-hidden="true">
                 <span className="badge-dot" />
-                <span>ORIGINAL CLEMMO MODELL</span>
+                <span>ENTWICKELT IN DEUTSCHLAND</span>
               </div>
             </div>
           </div>
