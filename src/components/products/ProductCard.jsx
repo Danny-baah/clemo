@@ -27,9 +27,8 @@ export default function ProductCard({
           className="product-card-img"
           loading="lazy"
         />
-        <div className="image-ai-badge" aria-hidden="true">
-          <span className="badge-dot" />
-          <span>KI-GENERIERTES BILD</span>
+        <div className="ai-subtle-tag" aria-hidden="true">
+          <span>KI-generiert</span>
         </div>
       </div>
 

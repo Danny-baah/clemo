@@ -64,7 +64,7 @@ export default function About() {
   ];
 
   return (
-    <section id="ueber-uns" className="about-section" aria-label="Über Clemmo HP">
+    <section id="ueber-uns" className="about-section" aria-label="Über Clemmo">
       <div className="about-container">
         {/* Main Editorial Two-Column Hero */}
         <div className="about-editorial-grid">
@@ -72,7 +72,7 @@ export default function About() {
           <div className="about-content-col">
             <div className="about-eyebrow">
               <span className="about-eyebrow-rule" aria-hidden="true" />
-              <span className="about-eyebrow-text">Über Clemmo</span>
+              <span className="about-eyebrow-text">ÜBER CLEMMO</span>
             </div>
 
             <h2 className="about-headline">
@@ -138,9 +138,12 @@ export default function About() {
                 className="about-model-image"
                 loading="lazy"
               />
-              <div className="image-ai-badge" aria-hidden="true">
+              <div className="ai-subtle-tag" aria-hidden="true">
+                <span>KI-generiert</span>
+              </div>
+              <div className="about-image-badge" aria-hidden="true">
                 <span className="badge-dot" />
-                <span>KI-GENERIERTES BILD</span>
+                <span>Maßgeschneiderte Designs</span>
               </div>
             </div>
           </div>
@@ -165,9 +168,8 @@ export default function About() {
                     className="capability-thumbnail"
                     loading="lazy"
                   />
-                  <div className="image-ai-badge image-ai-badge--sm" aria-hidden="true">
-                    <span className="badge-dot" />
-                    <span>KI-GENERIERTES BILD</span>
+                  <div className="ai-subtle-tag" aria-hidden="true">
+                    <span>KI-generiert</span>
                   </div>
                 </div>
               </div>

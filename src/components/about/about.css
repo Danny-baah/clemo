@@ -282,6 +282,13 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.capability-thumbnail-wrapper .ai-subtle-tag {
+  top: 0.45rem;
+  left: 0.45rem;
+  font-size: 0.5rem;
+  padding: 0.15rem 0.38rem;
+}
+
 .capability-thumbnail-wrapper:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 24px rgba(22, 38, 35, 0.14);
@@ -331,5 +338,13 @@
   .about-capabilities-grid {
     grid-template-columns: 1fr;
     gap: 2.2rem;
+  }
+
+  .about-image-badge {
+    bottom: 0.85rem;
+    right: 0.85rem;
+    font-size: 0.65rem;
+    padding: 0.42rem 0.85rem;
+    letter-spacing: 0.08em;
   }
 }

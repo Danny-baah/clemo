@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './footer.css';
 
 /**
- * Footer - Standard Clemmo footer with 4-column editorial layout:
- * Brand & Socials, Navigation, Rechtliches, and Kontakt.
- * Operates in standard document flow.
+ * Footer - Complete Clemmo HP footer with upper CTA banner,
+ * 5-column editorial navigation, verified contact data, newsletter subscription,
+ * and bottom copyright bar matching the design reference image.
  */
 export default function Footer() {
   const handleSmoothScroll = (e, targetId) => {
@@ -27,11 +27,11 @@ export default function Footer() {
       <div className="footer-main-container">
         <div className="footer-main-inner">
           <div className="footer-cols-grid">
-            {/* Column 1: Brand & Tagline & Description & Socials */}
+            {/* Column 1: Brand & Description & Socials */}
             <div className="footer-col footer-col-brand">
               <div className="footer-brand-header">
                 <span className="footer-brand-wordmark">Clemmo<sup>®</sup></span>
-                <span className="footer-brand-tagline">Custom Building Solutions for Brands</span>
+                <span className="footer-brand-tagline">Klemmbausteine individuell nach Wunsch</span>
               </div>
               <p className="footer-brand-desc">
                 Wir entwickeln und produzieren individuelle Baustein-Sets für Unternehmen, 
@@ -61,7 +61,7 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Column 2: Navigation */}
+            {/* Column 2: Navigation (Single-Page In-Page Anchors) */}
             <div className="footer-col">
               <div className="footer-col-header">
                 <span className="footer-col-title">NAVIGATION</span>
@@ -161,7 +161,7 @@ export default function Footer() {
         </div>
 
         {/* ------------------------------------------------------------------
-            BOTTOM COPYRIGHT & LEGAL BAR
+            3. BOTTOM COPYRIGHT & LEGAL BAR
             ------------------------------------------------------------------ */}
         <div className="footer-bottom-bar">
           <div className="footer-main-inner footer-bottom-inner">
@@ -173,15 +173,15 @@ export default function Footer() {
             </span>
             <div className="footer-bottom-links">
               <a href="#impressum" className="footer-bottom-link">Impressum</a>
-              <span className="footer-divider-spacing" aria-hidden="true">    </span>
+              <span className="footer-divider-dot" aria-hidden="true">·</span>
               <a href="#datenschutz" className="footer-bottom-link">Datenschutz</a>
             </div>
           </div>
         </div>
 
-        {/* Subtle Decorative Bricks Wireframe in background (Lower-Right) */}
+        {/* Subtle Decorative Bricks Wireframe in background */}
         <div className="footer-deco-bricks" aria-hidden="true">
-          <svg width="220" height="180" viewBox="0 0 220 180" fill="none" stroke="rgba(87, 120, 119, 0.16)" strokeWidth="1.2">
+          <svg width="220" height="180" viewBox="0 0 220 180" fill="none" stroke="rgba(87, 120, 119, 0.12)" strokeWidth="1.2">
             {/* Isometric Brick Wireframe 1 */}
             <path d="M 120 40 L 160 20 L 200 40 L 160 60 Z" />
             <path d="M 120 40 L 120 70 L 160 90 L 160 60" />

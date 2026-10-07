@@ -114,12 +114,9 @@ export default function Hero() {
               loading="eager"
               fetchPriority="high"
             />
+            <span className="ai-tag-top-left" aria-hidden="true">KI-generiert</span>
             {/* Subtle atmospheric vignette and highlight overlays */}
             <div className="hero-visual-vignette" aria-hidden="true" />
-            <div className="image-ai-badge" aria-hidden="true">
-              <span className="badge-dot" />
-              <span>KI-GENERIERTES BILD</span>
-            </div>
           </div>
         </div>
       </div>
