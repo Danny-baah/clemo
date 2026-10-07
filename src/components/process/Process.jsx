@@ -15,7 +15,7 @@ const PROCESS_STEPS = [
   {
     number: '02',
     title: 'DESIGN & ENTWICKLUNG',
-    desc: 'Unsere Designer erstellen detaillierte Modelle und Konstruktionspläne – präzise und markengerecht.',
+    desc: 'Unsere Designer erstellen detaillierte Modelle und die gedruckte Schritt-für-Schritt Bauanleitung – präzise, verständlich und markengerecht.',
     image: '/process/step2.jpg',
     alt: 'Design und Modellierung des Baustein-Modells auf Konstruktionsplan',
   },
@@ -29,7 +29,7 @@ const PROCESS_STEPS = [
   {
     number: '04',
     title: 'LIEFERUNG & SUPPORT',
-    desc: 'Ihr fertiges Set wird weltweit geliefert – zuverlässig, termingerecht und mit persönlicher Betreuung.',
+    desc: 'Ihr fertiges Set wird weltweit geliefert – inklusive gedruckter Schritt-für-Schritt Bauanleitung, zuverlässig und termingerecht.',
     image: '/process/step4.jpg',
     alt: 'Fertig verpacktes Clemmo HP Set bereit zur Auslieferung',
   },

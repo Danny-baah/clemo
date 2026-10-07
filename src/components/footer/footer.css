@@ -201,6 +201,19 @@
   font-weight: 500;
 }
 
+.footer-credit-link {
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.footer-credit-link:hover {
+  color: #55b6a7;
+  opacity: 0.95;
+}
+
 .footer-bottom-links {
   display: flex;
   align-items: center;

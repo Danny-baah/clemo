@@ -122,7 +122,7 @@ export default function Products() {
       id: 'tech',
       variant: 'dark',
       title: 'Technische Sets',
-      description: 'Komplexe Modelle mit speziellen Funktionen und technischen Anforderungen.',
+      description: 'Komplexe Modelle mit speziellen Funktionen – auf Wunsch voll funktionsfähig mit Akku-Box, Motoren und Bluetooth-RC-Fernbedienung.',
       image: './products/product_tech.jpg',
       alt: 'Komplexe technische Modelle und Funktionsbausätze aus Klemmbausteinen',
       points: [
@@ -143,7 +143,15 @@ export default function Products() {
           ),
         },
         {
-          text: 'Bewegliche Funktionen und Details',
+          text: 'Auf Wunsch mit Akku-Box, Motoren & Bluetooth-RC',
+          icon: (
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+            </svg>
+          ),
+        },
+        {
+          text: 'Voll funktionsfähige Mechanik & Details',
           icon: (
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
@@ -152,14 +160,6 @@ export default function Products() {
               <polyline points="21 12 16.5 14.6 16.5 19.79" />
               <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
               <line x1="12" y1="22.08" x2="12" y2="12" />
-            </svg>
-          ),
-        },
-        {
-          text: 'Für anspruchsvolle Projekte und Zielgruppen',
-          icon: (
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
             </svg>
           ),
         },
@@ -191,6 +191,7 @@ export default function Products() {
             <p className="products-subtext">
               Ob kleine Sets, individuelle Sonderanfertigungen oder komplexe technische Modelle –
               wir entwickeln und produzieren maßgeschneiderte Klemmbaustein-Lösungen für Ihre Marke.
+              Alle Sets inklusive gedruckter Schritt-für-Schritt Bauanleitung.
             </p>
           </div>
 
@@ -218,6 +219,24 @@ export default function Products() {
               className={`reveal-init ${isVisible ? 'reveal-active' : ''} reveal-delay-${index + 1}`}
             />
           ))}
+        </div>
+
+        {/* Universal Set Feature Callout */}
+        <div className={`products-inclusion-banner reveal-init ${isVisible ? 'reveal-active' : ''}`}>
+          <div className="products-inclusion-icon-wrapper" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="products-inclusion-icon">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+              <polyline points="9 8 13 8" />
+              <polyline points="9 12 15 12" />
+            </svg>
+          </div>
+          <div className="products-inclusion-text">
+            <span className="products-inclusion-tag">Standard bei jedem Modell</span>
+            <p className="products-inclusion-desc">
+              <strong>Alle Sets mit gedruckter Schritt-für-Schritt Bauanleitung:</strong> Jedes Modell wird vollständig mit einer hochwertig gedruckten, leicht verständlichen Schritt-für-Schritt Bauanleitung geliefert – auf Wunsch individuell an Ihr Corporate Design angepasst.
+            </p>
+          </div>
         </div>
       </div>
     </section>

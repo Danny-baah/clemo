@@ -6,16 +6,31 @@ import './footer.css';
  * 5-column editorial navigation, verified contact data, newsletter subscription,
  * and bottom copyright bar matching the design reference image.
  */
-export default function Footer() {
+export default function Footer({ onNavigate }) {
   const handleSmoothScroll = (e, targetId) => {
     e.preventDefault();
     if (targetId === '#') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (onNavigate) {
+        onNavigate('home');
+      } else {
+        window.location.hash = '';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
       return;
     }
     const el = document.querySelector(targetId);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleLegalClick = (e, targetPage) => {
+    e.preventDefault();
+    if (onNavigate) {
+      onNavigate(targetPage);
+    } else {
+      window.location.hash = `#${targetPage}`;
+      window.scrollTo(0, 0);
     }
   };
 
@@ -84,8 +99,8 @@ export default function Footer() {
                 <span className="footer-col-dash" aria-hidden="true">—</span>
               </div>
               <ul className="footer-links-list" role="list">
-                <li><a href="#impressum" className="footer-link">Impressum</a></li>
-                <li><a href="#datenschutz" className="footer-link">Datenschutz</a></li>
+                <li><a href="#impressum" onClick={(e) => handleLegalClick(e, 'impressum')} className="footer-link">Impressum</a></li>
+                <li><a href="#datenschutz" onClick={(e) => handleLegalClick(e, 'datenschutz')} className="footer-link">Datenschutz</a></li>
                 <li><a href="#agb" className="footer-link">AGB</a></li>
                 <li><a href="#widerruf" className="footer-link">Widerruf</a></li>
                 <li><a href="#versand" className="footer-link">Versand</a></li>
@@ -169,12 +184,20 @@ export default function Footer() {
               © 2026 Clemmo. Alle Rechte vorbehalten.
             </span>
             <span className="footer-credits">
-              Webdesign by EmanCopys
+              Webdesign by{' '}
+              <a
+                href="https://emancopys.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-credit-link"
+              >
+                EmanCopys
+              </a>
             </span>
             <div className="footer-bottom-links">
-              <a href="#impressum" className="footer-bottom-link">Impressum</a>
+              <a href="#impressum" onClick={(e) => handleLegalClick(e, 'impressum')} className="footer-bottom-link">Impressum</a>
               <span className="footer-divider-dot" aria-hidden="true">·</span>
-              <a href="#datenschutz" className="footer-bottom-link">Datenschutz</a>
+              <a href="#datenschutz" onClick={(e) => handleLegalClick(e, 'datenschutz')} className="footer-bottom-link">Datenschutz</a>
             </div>
           </div>
         </div>
