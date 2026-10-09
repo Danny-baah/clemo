@@ -10,7 +10,7 @@ import Impressum from './components/legal/Impressum.jsx';
 import Datenschutz from './components/legal/Datenschutz.jsx';
 
 /**
- * App - Root application component for the Clemmo HP.
+ * App - Root application component for the Clemmo.
  * Manages view routing between:
  * - 'home' (Full interactive landing page)
  * - 'impressum' (Dedicated legal notice page)

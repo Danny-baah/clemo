@@ -1,7 +1,7 @@
 import React from 'react';
 
 /**
- * Story stages definition for the 4-step Clemmo HP Process.
+ * Story stages definition for the 4-step Clemmo Process.
  * Follows exact user specifications for labels, headlines, and supporting text.
  */
 export const PROCESS_STEPS = [

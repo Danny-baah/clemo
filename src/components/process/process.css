@@ -1,5 +1,5 @@
 /* ==========================================================================
-   CLEMMO HP - STATIC STANDARD PROCESS SECTION STYLES
+   CLEMMO - STATIC STANDARD PROCESS SECTION STYLES
    ========================================================================== */
 
 .process-static-root {
@@ -133,6 +133,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.85rem;
+  align-items: stretch;
 }
 
 .process-timeline-bar {
@@ -142,7 +143,7 @@
 .process-step-col {
   display: flex;
   flex-direction: column;
-  gap: 0.9rem;
+  height: 100%;
 }
 
 /* Step Header: Circle badge + Title */
@@ -152,6 +153,7 @@
   gap: 0.85rem;
   padding-bottom: 0.4rem;
   position: relative;
+  min-height: 48px;
 }
 
 .process-step-header::after {
@@ -186,27 +188,31 @@
   text-transform: uppercase;
   color: var(--color-bg);
   line-height: 1.25;
-  white-space: nowrap;
 }
 
 .process-step-desc {
   font-size: 0.88rem;
   line-height: 1.55;
   color: #486563;
-  min-height: 3.6rem;
-  margin: 0;
+  margin: 0 0 1.25rem 0;
+  flex: 1 1 auto;
 }
 
-/* Step Image Card */
+/* Step Image Card - Uniform horizontal baseline */
 .process-step-visual {
   position: relative;
   width: 100%;
+  margin-top: auto;
+  aspect-ratio: 16 / 10.5;
   border-radius: 14px;
   overflow: hidden;
   background-color: #ffffff;
   border: 1px solid rgba(87, 120, 119, 0.22);
   box-shadow: 0 8px 24px rgba(22, 38, 35, 0.08);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .process-step-visual:hover {
@@ -217,9 +223,14 @@
 .process-step-img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   aspect-ratio: 16 / 10.5;
   object-fit: cover;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   transition: transform 0.4s ease;
 }
 

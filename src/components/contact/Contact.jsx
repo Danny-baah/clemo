@@ -5,7 +5,7 @@ import GermanyMap from './GermanyMap';
 import './contact.css';
 
 /**
- * 3 Concise Reasons to contact Clemmo HP matching the reference image.
+ * 3 Concise Reasons to contact Clemmo matching the reference image.
  */
 const REASONS = [
   {

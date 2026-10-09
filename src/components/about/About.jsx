@@ -25,7 +25,7 @@ export default function About() {
       id: '02',
       title: 'Präzise Entwicklung',
       desc: 'Durchdachte Gestaltung und professionelle Produktentwicklung.',
-      image: './about/card2.jpg',
+      image: './about/card2_clean.jpg',
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="capability-icon">
           <rect x="2" y="3" width="20" height="14" rx="2" />
@@ -40,7 +40,7 @@ export default function About() {
       id: '03',
       title: 'Qualität & Sicherheit',
       desc: 'Hohe Qualitätsstandards und CE-konforme Umsetzung.',
-      image: './about/card3.jpg',
+      image: './about/card3_clean.jpg',
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="capability-icon">
           <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
@@ -52,7 +52,7 @@ export default function About() {
       id: '04',
       title: 'Zuverlässige Lieferung',
       desc: 'Import und Logistik bis zur fertigen Lieferung.',
-      image: './about/card4.jpg',
+      image: './about/card4_clean.jpg',
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="capability-icon">
           <circle cx="12" cy="12" r="10" />
@@ -167,6 +167,7 @@ export default function About() {
                     alt={cap.title}
                     className="capability-thumbnail"
                     loading="lazy"
+                    decoding="async"
                   />
                   <div className="ai-subtle-tag" aria-hidden="true">
                     <span>KI-generiert</span>

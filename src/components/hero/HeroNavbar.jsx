@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 /**
- * HeroNavbar - Premium B2B navigation bar for Clemmo HP.
+ * HeroNavbar - Premium B2B navigation bar for Clemmo.
  * Operates in standard document flow as a clean fixed header with backdrop blur on scroll.
  */
 export default function HeroNavbar() {

@@ -3,7 +3,7 @@ import HeroNavbar from './HeroNavbar.jsx';
 import './hero.css';
 
 /**
- * Hero - Standard static hero section for Clemmo HP.
+ * Hero - Standard static hero section for Clemmo.
  * Replaces previous canvas / scroll-scrubbed hero with a clean, high-performance static composition.
  * Features:
  * - Brand palette: Deep green-black (#162623), Soft light (#F0F5F7), Primary teal (#295255), Secondary teal (#577877)

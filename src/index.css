@@ -1,5 +1,5 @@
 /* ==========================================================================
-   CLEMMO HP - DESIGN SYSTEM & GLOBAL STYLES
+   CLEMMO - DESIGN SYSTEM & GLOBAL STYLES
    ========================================================================== */
 
 :root {
@@ -51,6 +51,16 @@ body {
   overflow-x: hidden;
   position: relative;
   line-height: 1.5;
+}
+
+/* Global High-Resolution Image Rendering & Anti-Blur Optimization */
+img {
+  max-width: 100%;
+  height: auto;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: auto;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 /* Custom discreet scrollbar for desktop */

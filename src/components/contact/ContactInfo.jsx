@@ -35,8 +35,8 @@ export default function ContactInfo() {
             <span className="info-label">Adresse</span>
             <div className="info-value address-lines">
               <strong>Clemmo</strong>
-              <span>[Adresse]</span>
-              <span>[PLZ Ort]</span>
+              <span>Rosenhofweg 10b</span>
+              <span>76149 Karlsruhe</span>
               <span>Deutschland</span>
             </div>
           </div>
@@ -67,7 +67,11 @@ export default function ContactInfo() {
             </div>
             <div className="info-content">
               <span className="info-label">E-Mail</span>
-              <span className="info-value">[E-Mail-Adresse]</span>
+              <span className="info-value">
+                <a href="mailto:info@clemmo.de" style={{ color: 'inherit', textDecoration: 'none' }}>
+                  info@clemmo.de
+                </a>
+              </span>
             </div>
           </div>
         </div>

@@ -9,29 +9,29 @@ const PROCESS_STEPS = [
     number: '01',
     title: 'IDEE & KONZEPT',
     desc: 'Wir besprechen Ihre Idee, Ziele und Anforderungen und entwickeln ein passendes Konzept.',
-    image: '/process/step1.jpg',
-    alt: 'Konzeptentwicklung und Skizzierung des Baustein-Sets',
+    image: '/process/step1_concept.jpg',
+    alt: 'Konzeptentwicklung und Skizzierung des maßgeschneiderten Baustein-Sets',
   },
   {
     number: '02',
     title: 'DESIGN & ENTWICKLUNG',
     desc: 'Unsere Designer erstellen detaillierte Modelle und die gedruckte Schritt-für-Schritt Bauanleitung – präzise, verständlich und markengerecht.',
-    image: '/process/step2.jpg',
-    alt: 'Design und Modellierung des Baustein-Modells auf Konstruktionsplan',
+    image: '/process/step2_design.jpg',
+    alt: 'Design und 3D-Modellierung des Baustein-Modells auf Konstruktionsplänen',
   },
   {
     number: '03',
     title: 'PRODUKTION',
     desc: 'Wir koordinieren die Produktion mit ausgewählten Partnern und achten auf höchste Qualitätsstandards.',
-    image: '/process/step3.jpg',
-    alt: 'Präzise Fertigung der hochwertigen Bausteine',
+    image: '/process/step3_production.jpg',
+    alt: 'Präzise Fertigung der hochwertigen Bausteine in modernen Produktionsanlagen',
   },
   {
     number: '04',
     title: 'LIEFERUNG & SUPPORT',
     desc: 'Ihr fertiges Set wird weltweit geliefert – inklusive gedruckter Schritt-für-Schritt Bauanleitung, zuverlässig und termingerecht.',
-    image: '/process/step4.jpg',
-    alt: 'Fertig verpacktes Clemmo HP Set bereit zur Auslieferung',
+    image: '/process/step4_delivery.jpg',
+    alt: 'Individuelles Clemmo Set in edler Verpackung mit gedruckter Bauanleitung',
   },
 ];
 
@@ -101,6 +101,7 @@ export default function Process() {
                   alt={step.alt}
                   className="process-step-img"
                   loading="lazy"
+                  decoding="async"
                 />
                 <span className="ai-tag-top-left ai-tag-top-left--sm" aria-hidden="true">KI-generiert</span>
               </div>
@@ -145,7 +146,7 @@ export default function Process() {
               <div className="process-cta-image-wrapper">
                 <img
                   src="/process/process_cta_model.jpg"
-                  alt="Maßgeschneidertes architektonisches Gebäudemodell von Clemmo HP auf Konstruktionsplänen"
+                  alt="Maßgeschneidertes architektonisches Gebäudemodell von Clemmo auf Konstruktionsplänen"
                   className="process-cta-img"
                   loading="lazy"
                 />

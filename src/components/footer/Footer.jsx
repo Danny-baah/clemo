@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './footer.css';
 
 /**
- * Footer - Complete Clemmo HP footer with upper CTA banner,
+ * Footer - Complete Clemmo footer with upper CTA banner,
  * 5-column editorial navigation, verified contact data, newsletter subscription,
  * and bottom copyright bar matching the design reference image.
  */
@@ -125,8 +125,8 @@ export default function Footer({ onNavigate }) {
                   </div>
                   <div className="footer-contact-text">
                     <strong>Clemmo</strong>
-                    <span>Adresse folgt</span>
-                    <span>PLZ Ort</span>
+                    <span>Rosenhofweg 10b</span>
+                    <span>76149 Karlsruhe</span>
                     <span>Deutschland</span>
                   </div>
                 </div>

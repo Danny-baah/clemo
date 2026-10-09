@@ -33,7 +33,7 @@ const QUALITY_PRINCIPLES = [
 ];
 
 /**
- * Quality Section ("Qualität") for Clemmo HP.
+ * Quality Section ("Qualität") for Clemmo.
  *
  * Characteristics:
  * - Normal document scroll (calm, stable counterpoint to the interactive Process section)
